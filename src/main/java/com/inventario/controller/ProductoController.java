@@ -1,39 +1,42 @@
 package com.inventario.controller;
 
 import com.inventario.entity.Producto;
-import com.inventario.repository.ProductoRepository;
+import com.inventario.service.ProductoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping ("/productos")
-@CrossOrigin ("*")
+@RequestMapping("/api/productos")
+@CrossOrigin("*")
 public class ProductoController {
-    private final ProductoRepository repo;
 
-    public ProductoController(ProductoRepository repo) {
-        this.repo = repo;
-    }
+    @Autowired
+    private ProductoService service;
 
     @GetMapping
-    public List<Producto> listar(){
-        return repo.findAll();
+    public List<Producto> listar() {
+        return service.listar();
     }
 
     @PostMapping
-    public Producto guardar(@RequestBody Producto producto){
-        return repo.save(producto);
+    public Producto guardar(@RequestBody Producto producto) {
+        return service.guardar(producto);
+    }
+
+    @GetMapping("/{id}")
+    public Producto obtener(@PathVariable Long id) {
+        return service.obtenerPorId(id);
     }
 
     @PutMapping("/{id}")
-    public Producto actualizar(@PathVariable Long id, @RequestBody Producto producto){
-        producto.setId_producto(id);
-        return repo.save(producto);
+    public Producto actualizar(@PathVariable Long id, @RequestBody Producto producto) {
+        return service.actualizar(id, producto);
     }
 
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Long id){
-        repo.deleteById(id);
+    public void eliminar(@PathVariable Long id) {
+        service.eliminar(id);
     }
 }

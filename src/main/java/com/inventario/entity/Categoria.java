@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table (name = "CBA_categorias")
+@Table (name = "categorias")
 @Data
 public class Categoria {
     @Id
@@ -12,4 +12,5 @@ public class Categoria {
     private Long id_categoria;
 
     private String nombre;
+    private String descripcion;
 }
