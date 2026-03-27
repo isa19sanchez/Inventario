@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h2>Productos</h2>
+  
+
+  <input [(ngModel)]="filtro" class="form-control mb-2" placeholder="Buscar">
+
+  <button routerLink="/productos/nuevo" class="btn btn-primary mb-2">Nuevo</button>
+
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Stock</th>
+      <th>Precio</th>
+      <th></th>
+    </tr>
+
+    <tr *ngFor="let p of productos">
+      <td>{{p.nombre}}</td>
+      <td [class.text-danger]="p.stock < 10">{{p.stock}}</td>
+      <td>{{p.precio}}</td>
+      <td>
+        <button [routerLink]="['/productos/editar', p.id]" class="btn btn-warning btn-sm">Editar</button>
+        <button (click)="eliminar(p.id)" class="btn btn-danger btn-sm">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+</div>

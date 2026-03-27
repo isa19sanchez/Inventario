@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+
+    <h3 class="text-center mb-4">Registrar Proveedor</h3>
+
+    <form>
+
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control"
+          [(ngModel)]="nuevoProveedor.nombre" name="nombre">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Teléfono</label>
+        <input type="text" class="form-control"
+          [(ngModel)]="nuevoProveedor.telefono" name="telefono">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control"
+          [(ngModel)]="nuevoProveedor.email" name="email">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Dirección</label>
+        <input type="text" class="form-control"
+          [(ngModel)]="nuevoProveedor.direccion" name="direccion">
+      </div>
+
+      <button type="button" class="btn btn-primary w-100"
+        (click)="guardar()">
+        Guardar Proveedor
+      </button>
+
+    </form>
+  </div>
+
+  <!-- TABLA -->
+  <div class="card mt-4 p-3 shadow">
+    <h4 class="mb-3">Lista de Proveedores</h4>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of proveedores">
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.telefono }}</td>
+          <td>{{ p.email }}</td>
+          <td>{{ p.direccion }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm"
+              (click)="eliminar(p.id)">
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>

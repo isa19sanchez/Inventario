@@ -1,0 +1,9 @@
+<div class="container mt-3">
+  <h2>Producto</h2>
+
+  <input [(ngModel)]="producto.nombre" class="form-control mb-2" placeholder="Nombre">
+  <input [(ngModel)]="producto.precio" class="form-control mb-2" placeholder="Precio">
+  <input [(ngModel)]="producto.stock" class="form-control mb-2" placeholder="Stock">
+
+  <button (click)="guardar()" class="btn btn-success">Guardar</button>
+</div>

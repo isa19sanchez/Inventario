@@ -1,0 +1,39 @@
+<div class="container mt-4">
+
+  <div class="card p-4 shadow">
+    <h3>Categorías</h3>
+
+    <input class="form-control mb-2" placeholder="Nombre"
+      [(ngModel)]="nuevaCategoria.nombre" name="nombre">
+
+    <input class="form-control mb-2" placeholder="Descripción"
+      [(ngModel)]="nuevaCategoria.descripcion" name="descripcion">
+
+    <button class="btn btn-success w-100" (click)="guardar()">
+      Guardar
+    </button>
+  </div>
+
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of categorias">
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.descripcion }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="eliminar(c.id)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

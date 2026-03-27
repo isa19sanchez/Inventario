@@ -1,0 +1,11 @@
+.tarjeta {
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  background-color: #be2256;
+  color: white;
+}

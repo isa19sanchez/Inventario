@@ -1,0 +1,45 @@
+<div class="container mt-4">
+
+  <div class="card p-4 shadow">
+    <h3>Movimientos</h3>
+
+    <select class="form-control mb-2"
+      [(ngModel)]="nuevoMovimiento.productoId" name="productoId">
+      <option *ngFor="let p of productos" [value]="p.id">
+        {{ p.nombre }}
+      </option>
+    </select>
+
+    <select class="form-control mb-2"
+      [(ngModel)]="nuevoMovimiento.tipo" name="tipo">
+      <option value="ENTRADA">Entrada</option>
+      <option value="SALIDA">Salida</option>
+    </select>
+
+    <input type="number" class="form-control mb-2"
+      [(ngModel)]="nuevoMovimiento.cantidad" name="cantidad">
+
+    <button class="btn btn-primary w-100" (click)="guardar()">
+      Registrar
+    </button>
+  </div>
+
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Tipo</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let m of movimientos">
+        <td>{{ m.producto?.nombre }}</td>
+        <td>{{ m.tipo }}</td>
+        <td>{{ m.cantidad }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

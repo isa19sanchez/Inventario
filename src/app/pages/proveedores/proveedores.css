@@ -1,0 +1,42 @@
+.formulario-card {
+  border-radius: 20px;
+  background: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.formulario-card:hover {
+  transform: scale(1.01);
+}
+
+.titulo {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+button {
+  border-radius: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+body {
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+}
