@@ -58,3 +58,65 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 # Inventario
+
+
+# Inventario
+
+Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angular-cli) versión 21.1.4.
+
+## Servidor de desarrollo
+
+Para iniciar un servidor de desarrollo local, ejecuta:
+
+```bash
+ng serve
+```
+
+Una vez que el servidor esté en funcionamiento, abre tu navegador y ve a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifiques cualquiera de los archivos fuente.
+
+## Estructura de código
+
+Angular CLI incluye potentes herramientas de estructura de código. Para generar un nuevo componente, ejecuta:
+
+```bash
+ng generate component nombre-del-componente
+```
+
+Para obtener una lista completa de los esquemas disponibles (como `components`, `directives` o `pipes`), ejecuta:
+
+```bash
+ng generate --help
+```
+
+## Compilación
+
+Para compilar el proyecto, ejecuta:
+
+```bash
+ng build
+```
+
+Esto compilará tu proyecto y almacenará los artefactos de compilación en el directorio `dist/`. De forma predeterminada, la compilación de producción optimiza tu aplicación para mejorar el rendimiento y la velocidad.
+
+## Ejecución de pruebas unitarias
+
+Para ejecutar pruebas unitarias con el ejecutor de pruebas [Vitest](https://vitest.dev/), utiliza el siguiente comando:
+
+```bash
+ng test
+```
+
+## Ejecución de pruebas de extremo a extremo
+
+Para pruebas de extremo a extremo (e2e), ejecuta:
+
+```bash
+ng e2e
+```
+
+Angular CLI no incluye un marco de pruebas de extremo a extremo de forma predeterminada. Puedes elegir uno que se adapte a tus necesidades.
+
+## Recursos adicionales
+
+Para obtener más información sobre el uso de Angular CLI, incluidas referencias detalladas de los comandos, visita la página [Descripción general y referencia de comandos de Angular CLI](https://angular.dev/tools/cli).
+# Inventario
